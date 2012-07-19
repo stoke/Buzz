@@ -20,6 +20,8 @@ void usage() {
 void realMain(string[] args) {
   auto argv = optParse(args);
 
+  writefln("%s", argv);
+
   if (!includes(argv.keys, "s") || !includes(argv.keys, "p") || !includes(argv.keys, "c"))
     usage();
 
@@ -28,7 +30,7 @@ void realMain(string[] args) {
   // Just an example
   bot.addMessageListener(function int(string nick, string text, IRCUtils irc) {
     string[] args = split(text);
-
+    
     if (args[0] == "!nick")
       irc.changeNick(args[1]);
 

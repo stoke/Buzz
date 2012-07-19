@@ -8,7 +8,7 @@ string[string] optParse(string[] argv) {
     if (argv[index][0] == '-') {
       startindex = (argv[index][1] == '-') ? 2 : 1; 
 
-      args[argv[index][startindex..$]] = (index == argv.length-1) ? "" : argv[++index];
+      args[argv[index][startindex..$]] = (index == argv.length-1 || argv[index+1][0] == '-') ? "" : argv[++index];
     }
   }
 
