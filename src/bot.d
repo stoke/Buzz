@@ -20,8 +20,6 @@ void usage() {
 void realMain(string[] args) {
   auto argv = optParse(args);
 
-  writefln("%s", argv);
-
   if (!includes(argv.keys, "s") || !includes(argv.keys, "p") || !includes(argv.keys, "c"))
     usage();
 
