@@ -14,8 +14,8 @@ class IRCBot : IRCUtils {
     
     this.sock = new TcpSocket(new InternetAddress(domain, port));
     this.ss = new SocketStream(this.sock);
-    ss.writeString("NICK lolbot\r\n"
-                   "USER lolbot lolbot "~ domain ~" :lolbot\r\n");
+    ss.writeString("NICK Buzz\r\n"
+                   "USER Buzz Buzz "~ domain ~" :Buzz\r\n");
 
     super(ss, sock);
 
